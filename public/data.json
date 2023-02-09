@@ -9,12 +9,12 @@
         "id": "63e52b8302e4334c95c6a081",
         "price": 470,
         "name": "Cafe Latte",
-        "img": "https://img.freepik.com/free-photo/tasty-classic-traditional-italian-coffee-cappuccino-table-cafe-day-light-top-view-with-copy-space_1220-1334.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
+        "img": "https://img.freepik.com/free-photo/wooden-table-with-cup-coffee_1203-1631.jpg?size=626&ext=jpg&ga=GA1.1.456469406.1675268634&semt=sph"
     },
     {
         "id": "63e52b83d43da1e4ae8d98cb",
         "price": 450,
-        "name": "Cafe au Lait",
+        "name": "Cappuccino",
         "img": "https://img.freepik.com/free-photo/latte-coffee_1122-2728.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
     },
     {
@@ -45,7 +45,7 @@
         "id": "63e52b83dfc45082a83b131e",
         "price": 552,
         "name": "Americano",
-        "img": "https://img.freepik.com/free-vector/white-cup-hot-coffee-with-cinnamon-saucer-beans-wooden-table-realistic_1284-56783.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
+        "img": "https://img.freepik.com/free-photo/top-view-cup-tea-light_140725-129490.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
     },
     {
         "id": "63e52b8335ecff7fc429aaa1",
@@ -68,7 +68,7 @@
     {
         "id": "63e52ca9b9aa1620f8ffd304",
         "price": 422,
-        "name": "Cappuccino",
-        "img": "https://img.freepik.com/free-photo/cup-coffee-with-heart-drawn-foam_1286-70.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
+        "name": "Cafe au Lait",
+        "img": "https://img.freepik.com/free-photo/tasty-classic-traditional-italian-coffee-cappuccino-table-cafe-day-light-top-view-with-copy-space_1220-1334.jpg?size=626&ext=jpg&ga=GA1.2.456469406.1675268634&semt=sph"
     }
 ]
