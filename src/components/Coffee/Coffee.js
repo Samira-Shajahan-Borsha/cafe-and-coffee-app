@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsCartFill } from 'react-icons/bs';
 
 const Coffee = ({ coffee, handleAddToCart }) => {
     const { name, price, img } = coffee;
@@ -11,7 +12,7 @@ const Coffee = ({ coffee, handleAddToCart }) => {
                     <p className="card-text h6">Price: ${price}</p>
                 </div>
                 <div className='d-flex justify-content-center mb-3'>
-                    <button onClick={() => handleAddToCart(coffee)} type="button" className="btn btn-dark w-75">Add To Cart</button>
+                    <button onClick={() => handleAddToCart(coffee)} type="button" className="btn btn-dark w-75">Add To Cart <BsCartFill className='ms-4'/> </button>
                 </div>
             </div>
         </div>
