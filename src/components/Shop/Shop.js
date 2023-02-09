@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Coffee from '../Coffee/Coffee';
 import './Shop.css';
 
 const Shop = () => {
+
     const [coffees, setCoffees] = useState([]);
+    const [cart, setCart] = useState([]);
+    console.log(cart);
 
     // console.log(coffees);
 
@@ -11,7 +15,12 @@ const Shop = () => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCoffees(data));
-    }, [])
+    }, []);
+
+    const handleAddToCart = (selectedCoffee) => {
+        const newCart = [...cart, selectedCoffee];
+        setCart(newCart);
+    }
 
     return (
         <div>
@@ -23,12 +32,13 @@ const Shop = () => {
                             coffees.map(coffee => <Coffee
                                 key={coffee.id}
                                 coffee={coffee}
+                                handleAddToCart={handleAddToCart}
                             ></Coffee>)
                         }
                     </div>
                 </div>
                 <div className="col-md-3 my-5">
-                    <h1>Cart container</h1>
+                    <Cart cart={cart} />
                 </div>
             </div>
         </div>
