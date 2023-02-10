@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Coffee from '../Coffee/Coffee';
-import './Shop.css';
 
 const Shop = () => {
 
@@ -26,10 +25,7 @@ const Shop = () => {
         }
     }
 
-
-
     const handleDelete = (selectedCoffee) => {
-        console.log(selectedCoffee);
         let newCart = [];
         const rest = cart.filter(coffee => coffee.id !== selectedCoffee.id);
         if (selectedCoffee) {
