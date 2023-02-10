@@ -26,9 +26,7 @@ const Shop = () => {
         }
     }
 
-    const handleChooseAgain = () => {
-        setCart([]);
-    }
+
 
     const handleDelete = (selectedCoffee) => {
         console.log(selectedCoffee);
@@ -57,7 +55,7 @@ const Shop = () => {
                 </div>
                 <div className="col-md-3 my-5">
                     <Cart cart={cart}
-                        handleChooseAgain={handleChooseAgain}
+                        setCart={setCart}
                         handleDelete={handleDelete}
                     />
                 </div>

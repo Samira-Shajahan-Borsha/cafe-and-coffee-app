@@ -3,7 +3,7 @@ import { BiTrash } from 'react-icons/bi';
 import FreeCoffee from '../FreeCoffee/FreeCoffee';
 import './Cart.css';
 
-const Cart = ({ cart, handleChooseAgain, handleDelete }) => {
+const Cart = ({ cart, setCart, handleDelete }) => {
 
     const [freeCoffee, setFreeCoffee] = useState({});
     const [showOffer, setShowOffer] = useState(false);
@@ -22,6 +22,11 @@ const Cart = ({ cart, handleChooseAgain, handleDelete }) => {
             setShowOffer(false);
         }
     }, [cart]);
+
+    const handleChooseAgain = () => {
+        setFreeCoffee({});
+        setCart([]);
+    }
 
     return (
         <div className="cart card mb-3 p-4 shadow-lg border-0">
