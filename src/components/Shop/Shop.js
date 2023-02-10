@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Coffee from '../Coffee/Coffee';
+import './Shop.css';
 
 const Shop = () => {
 
@@ -36,7 +37,8 @@ const Shop = () => {
 
     return (
         <div>
-            <h1 className='text-center  my-3'>Start your day with a black coffee</h1>
+            <h1 className='text-center app-title mt-4'>Cafe And Couffee</h1>
+            <h4 className='text-center my-3'>Start your day with a coffee!</h4>
             <div className='row g-4'>
                 <div className="col-md-9 my-5">
                     <div className="row g-4">
