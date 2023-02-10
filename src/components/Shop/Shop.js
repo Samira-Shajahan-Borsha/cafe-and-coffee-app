@@ -7,7 +7,7 @@ const Shop = () => {
 
     const [coffees, setCoffees] = useState([]);
     const [cart, setCart] = useState([]);
-    console.log(cart);
+    // console.log(cart);
 
     // console.log(coffees);
 
@@ -18,6 +18,7 @@ const Shop = () => {
     }, []);
 
     const handleAddToCart = (selectedCoffee) => {
+        
         const newCart = [...cart, selectedCoffee];
         setCart(newCart);
     }
