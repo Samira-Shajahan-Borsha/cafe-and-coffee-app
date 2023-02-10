@@ -7,9 +7,6 @@ const Shop = () => {
 
     const [coffees, setCoffees] = useState([]);
     const [cart, setCart] = useState([]);
-    // console.log(cart);
-
-    // console.log(coffees);
 
     useEffect(() => {
         fetch('data.json')
@@ -18,9 +15,19 @@ const Shop = () => {
     }, []);
 
     const handleAddToCart = (selectedCoffee) => {
-        
-        const newCart = [...cart, selectedCoffee];
-        setCart(newCart);
+        let newCart = [];
+        const selectedCoffeeOnCart = cart.find(coffee => coffee.id === selectedCoffee.id);
+        if (!selectedCoffeeOnCart) {
+            newCart = [...cart, selectedCoffee];
+            setCart(newCart);
+        }
+        else {
+            alert('The product is already added in cart');
+        }
+    }
+
+    const handleChooseAgain = () => {
+        setCart([]);
     }
 
     return (
@@ -39,7 +46,9 @@ const Shop = () => {
                     </div>
                 </div>
                 <div className="col-md-3 my-5">
-                    <Cart cart={cart} />
+                    <Cart cart={cart}
+                        handleChooseAgain={handleChooseAgain}
+                    />
                 </div>
             </div>
         </div>

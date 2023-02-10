@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BiTrash } from 'react-icons/bi';
 import FreeCoffee from '../FreeCoffee/FreeCoffee';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleChooseAgain }) => {
 
     const [freeCoffee, setFreeCoffee] = useState({});
     const [showOffer, setShowOffer] = useState(false);
@@ -20,8 +20,7 @@ const Cart = ({ cart }) => {
         else {
             setShowOffer(false);
         }
-    }, [cart])
-
+    }, [cart]);
 
     return (
         <div className="card mb-3 p-4">
@@ -32,11 +31,11 @@ const Cart = ({ cart }) => {
                         key={index} className="card-title"
                     >{coffee.name} <BiTrash /></h5>)
                 }
-                <button onClick={() => handleChooseOne(cart)} type="button" className="btn btn-outline-primary btn-sm mb-2" disabled={!showOffer}>Choose one for me</button>
+                <button onClick={() => handleChooseOne(cart)} type="button" className="btn btn-primary btn-sm mb-2" disabled={!showOffer}>Choose one for me</button>
                 {
-                    Object.keys(freeCoffee).length > 0 && (<FreeCoffee freeCoffee={freeCoffee}></FreeCoffee>)
+                    Object.keys(freeCoffee).length > 0 && cart.length > 0 && (<FreeCoffee freeCoffee={freeCoffee}></FreeCoffee>)
                 }
-                <button type="button" className="btn btn-outline-secondary btn-sm">Choose again</button>
+                <button onClick={handleChooseAgain} disabled={!showOffer} type="button" className="btn btn-secondary btn-sm">Choose again</button>
             </div>
         </div>
     );
