@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BiTrash } from 'react-icons/bi';
 import FreeCoffee from '../FreeCoffee/FreeCoffee';
+import './Cart.css';
 
 const Cart = ({ cart, handleChooseAgain }) => {
 
@@ -23,8 +24,8 @@ const Cart = ({ cart, handleChooseAgain }) => {
     }, [cart]);
 
     return (
-        <div className="card mb-3 p-4">
-            <p>Selected Items: {cart.length}</p>
+        <div className="cart card mb-3 p-4 shadow-lg border-0">
+            <h4>Selected Items: {cart.length}</h4>
             <div className="card-body">
                 {
                     cart.map((coffee, index) => <h5
