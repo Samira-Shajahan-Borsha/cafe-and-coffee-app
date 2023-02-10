@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Cafe and Couffee App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Click on [Project Live Link](https://cafe-and-couffee-d13748.netlify.app/).
 
 ## Available Scripts
 
