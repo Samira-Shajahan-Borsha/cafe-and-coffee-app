@@ -3,7 +3,7 @@ import { BiTrash } from 'react-icons/bi';
 import FreeCoffee from '../FreeCoffee/FreeCoffee';
 import './Cart.css';
 
-const Cart = ({ cart, handleChooseAgain }) => {
+const Cart = ({ cart, handleChooseAgain, handleDelete }) => {
 
     const [freeCoffee, setFreeCoffee] = useState({});
     const [showOffer, setShowOffer] = useState(false);
@@ -30,7 +30,7 @@ const Cart = ({ cart, handleChooseAgain }) => {
                 {
                     cart.map((coffee, index) => <h5
                         key={index} className="card-title"
-                    >{coffee.name} <BiTrash /></h5>)
+                    >{coffee.name} <BiTrash className='delete-btn' onClick={() => handleDelete(coffee)} /></h5>)
                 }
                 <button onClick={() => handleChooseOne(cart)} type="button" className="btn btn-primary btn-sm mb-2" disabled={!showOffer}>Choose one for me</button>
                 {

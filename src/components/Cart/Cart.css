@@ -2,3 +2,7 @@
     position: sticky;
     top: 40px;
 }
+
+.delete-btn{
+    cursor: pointer;
+}

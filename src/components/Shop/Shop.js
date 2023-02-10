@@ -30,6 +30,16 @@ const Shop = () => {
         setCart([]);
     }
 
+    const handleDelete = (selectedCoffee) => {
+        console.log(selectedCoffee);
+        let newCart = [];
+        const rest = cart.filter(coffee => coffee.id !== selectedCoffee.id);
+        if (selectedCoffee) {
+            newCart = [...rest];
+            setCart(newCart);
+        }
+    }
+
     return (
         <div>
             <h1 className='text-center  my-3'>Start your day with a black coffee</h1>
@@ -48,6 +58,7 @@ const Shop = () => {
                 <div className="col-md-3 my-5">
                     <Cart cart={cart}
                         handleChooseAgain={handleChooseAgain}
+                        handleDelete={handleDelete}
                     />
                 </div>
             </div>
